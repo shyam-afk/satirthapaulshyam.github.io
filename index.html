@@ -1,99 +1,231 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>Satirtha Paul Shyam</title>
 
     <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#f8fafc;
+            color:#0f172a;
+        }
 
-    /* Paste the CSS here */
+        .navbar{
+            position:sticky;
+            top:0;
+            z-index:1000;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px 8%;
+            background:rgba(15,23,42,0.95);
+            backdrop-filter:blur(12px);
+            box-shadow:0 5px 20px rgba(0,0,0,0.15);
+        }
 
-    .navbar{
-        position: sticky;
-        top: 0;
-        z-index: 1000;
+        .logo{
+            color:white;
+            font-size:28px;
+            font-weight:bold;
+        }
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        .nav-links{
+            list-style:none;
+            display:flex;
+            gap:28px;
+            margin:0;
+            padding:0;
+        }
 
-        padding: 18px 8%;
-        background: rgba(15,23,42,0.95);
+        .nav-links a{
+            color:white;
+            text-decoration:none;
+            font-weight:600;
+            transition:0.3s;
+        }
 
-        backdrop-filter: blur(12px);
+        .nav-links a:hover{
+            color:#38bdf8;
+        }
 
-        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    }
+        .hero{
+            min-height:80vh;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:60px 10%;
+            gap:40px;
+        }
 
-    .logo{
-        color:white;
-        font-size:28px;
-        font-weight:bold;
-    }
+        .hero-text{
+            max-width:650px;
+        }
 
-    .nav-links{
-        list-style:none;
-        display:flex;
-        gap:30px;
-    }
+        .hero-text h1{
+            font-size:56px;
+            margin-bottom:10px;
+        }
 
-    .nav-links a{
-        color:white;
-        text-decoration:none;
-        font-weight:600;
-        transition:0.3s;
-    }
+        .hero-text h2{
+            color:#2563eb;
+            margin-bottom:20px;
+        }
 
-    .nav-links a:hover{
-        color:#38bdf8;
-    }
+        .hero-text p{
+            font-size:19px;
+            line-height:1.8;
+            color:#475569;
+        }
 
+        .hero-buttons a{
+            display:inline-block;
+            margin-right:15px;
+            margin-top:20px;
+            padding:12px 24px;
+            background:#2563eb;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            transition:0.3s;
+        }
+
+        .hero-buttons a:hover{
+            transform:translateY(-3px);
+            background:#1d4ed8;
+        }
+
+        .hero-image img{
+            width:310px;
+            height:310px;
+            object-fit:cover;
+            border-radius:50%;
+            box-shadow:0 20px 40px rgba(0,0,0,0.18);
+        }
+
+        section{
+            padding:70px 10%;
+        }
+
+        section h2{
+            font-size:38px;
+            margin-bottom:20px;
+        }
+
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:16px;
+            box-shadow:0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .card p{
+            font-size:18px;
+            line-height:1.8;
+            color:#475569;
+        }
+
+        .card li{
+            margin-bottom:10px;
+            font-size:17px;
+        }
     </style>
-
 </head>
 
 <body>
 
 <nav class="navbar">
-    <div class="logo">
-        SPS
-    </div>
+    <div class="logo">SPS</div>
 
     <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#research">Research</a></li>
+        <li><a href="#teaching">Teaching</a></li>
         <li><a href="publist.html">Publications</a></li>
-       
         <li><a href="CV.pdf" target="_blank">CV</a></li>
-        <li><a href="#contact">Contact.pdf</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
-<section class="hero">
 
+<section id="home" class="hero">
     <div class="hero-text">
-
         <h1>Satirtha Paul Shyam</h1>
 
         <h2>Researcher in Computer Vision & Medical AI</h2>
 
         <p>
-            My research focuses on Medical Image Analysis,
-            Ambiguous Segmentation, Aleatoric Uncertainty, Probabilistic Deep Learning,
-            Stable Diffusion Models, Generative AI, Variational Autoencoders, Normalizing Flows, Classical Image Segmentation, Active Contour Model.
+            My research focuses on Medical Image Analysis, Ambiguous Segmentation,
+            Aleatoric Uncertainty, Probabilistic Deep Learning, Diffusion Models,
+            Generative AI, Variational Autoencoders, Normalizing Flows,
+            Classical Image Segmentation, and Active Contour Models.
         </p>
 
         <div class="hero-buttons">
-            <a href="publist.html">Publications</a>
+            <a href="publist.html">View Publications</a>
             <a href="CV.pdf" target="_blank">Download CV</a>
         </div>
-
     </div>
 
     <div class="hero-image">
         <img src="Profile.jpeg" alt="Profile">
     </div>
-
 </section>
+
+<section id="research">
+    <h2>Research Interests</h2>
+
+    <div class="card">
+        <p>
+            My research lies at the intersection of computer vision, medical image analysis,
+            and probabilistic deep learning, with a particular focus on uncertainty-aware
+            and ambiguity-aware medical image segmentation.
+        </p>
+    </div>
+</section>
+
+<section id="teaching">
+    <h2>Teaching Experience</h2>
+
+    <div class="card">
+        <p>
+            I have been teaching in the Department of Electrical and Electronic Engineering
+            at Green University of Bangladesh for approximately two years.
+        </p>
+
+        <p>
+            During this period, I have taught several undergraduate theory courses covering
+            signal processing, communication systems, semiconductor devices,
+            electromagnetics, microprocessors, numerical methods, and introductory
+            electrical engineering.
+        </p>
+
+        <h3>Courses Taught</h3>
+
+        <ul>
+            <li>EEE 335 – Digital Signal Processing</li>
+            <li>EEE 309 – Solid State Devices</li>
+            <li>EEE 205 – Engineering Electromagnetics</li>
+            <li>EEE 317 – Microprocessor and Interfacing</li>
+            <li>EEE 307 – Communication Theory</li>
+            <li>MATH 301 – Numerical Methods</li>
+            <li>EEE 101 – Introduction to Electrical Engineering</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <div class="card">
+        <p><b>Email:</b> shyam@eee.green.edu.bd</p>
+        <p><b>Phone:</b> +8801783446734</p>
+        <p><b>Google Scholar:</b> 
+            <a href="https://scholar.google.com/citations?user=1hF5pfUAAAAJ" target="_blank">
+                View Profile
+            </a>
+        </p>
+    </div>
+</section>
+
 </body>
 </html>
-
